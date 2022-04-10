@@ -13,6 +13,7 @@ function useFetch(url) {
           if (!response.ok) {
             setError('Something went wrong!!!')
             setLoading(false)
+            setData([])
           } else {
             return response.json()
           }
@@ -20,6 +21,7 @@ function useFetch(url) {
         .then(data => {
           setData(data)
           setLoading(false)
+          setError('')
         });
     }, [])
     
