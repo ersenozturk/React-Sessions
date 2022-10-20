@@ -43,11 +43,27 @@ const AddHome = () => {
     getTutorials1();
   };
 
+  const editTutorials = async (editedID,editedTitle,editedDesc) => {
+    const filtered = tutorials.filter((item)=> item.id === editedID )
+    console.log(filtered);
+    const filterAfterMap = filtered.map(()=>({
+      title:editedTitle,
+      description:editedDesc
+    }))
+
+    try {
+      await axios.put(`${apiURL}/${editedID}`,filterAfterMap[0]);
+    } catch (error) {
+      console.log(error);
+    }
+    getTutorials1();
+  };
+
   return (
     <div className="container mx-auto my-2 bg-light">
       <h1 className="text-center">Add Your Tutorial</h1>
       <AddTutor addTutorials={addTutorials} />
-      <TutorList tutorials={tutorials} deleteTutorials={deleteTutorials} />
+      <TutorList tutorials={tutorials} deleteTutorials={deleteTutorials} editTutorials={editTutorials}/>
     </div>
   );
 };
