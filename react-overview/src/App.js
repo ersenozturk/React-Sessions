@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import ReducerExercise from "./components/reducerExercise/ReducerExercise";
 // import Events from "./components/Events";
 // import Main from "./components/Main";
 // import UseState from './components/UseStete'
@@ -7,7 +7,7 @@ import "./App.css";
 // import FormObject from "./components/FormObject";
 // import LifeCycle from "./components/LifeCycle";
 // import Users from "./components/Users";
-import AddHome from "./components/AddYourTutorials/AddHome";
+// import AddHome from "./components/AddYourTutorials/AddHome";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -26,7 +26,9 @@ function App() {
 
       {/* <Users /> */}   {/*---> useFetch */}
 
-      <AddHome />
+      {/* <AddHome /> */}
+
+      <ReducerExercise/>
     </div>
   );
 }
