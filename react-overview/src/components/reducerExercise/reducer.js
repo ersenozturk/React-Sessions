@@ -1,23 +1,18 @@
 export const initialState = {
-  dog: "",
-  error: "",
-  loadig: false,
-};
-
-export const reducer = (state, action) => {
-  switch (action.type) {
-    case 'INITIAL':
-      return { ...state, dog: "", error: "", loadig: true };
-    case 'SUCCESS':
-      return { ...state, dog: action.payload, error: "", loadig: false };
-    case 'ERROR':
-      return {
-        ...state,
-        dog: "",
-        error: action.payload,
-        loadig: false,
-      };
-    default:
-      break;
-  }
-};
+    loading: false,
+    dog: '',
+    error: '',
+  };
+  
+  export const reducer = (state, action) => {
+    switch (action.type) {
+      case 'START':
+        return { ...state, dog: '', error: '', loading: true };
+      case 'SUCCESS':
+        return { ...state, dog: action.payload, error: '', loading: false };
+      case 'FAIL':
+        return { ...state, dog: '', error: action.payload, loading: false };
+      default:
+        break;
+    }
+  };

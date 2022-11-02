@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ReducerExercise from "./components/reducerExercise/ReducerExercise";
+
 // import Events from "./components/Events";
 // import Main from "./components/Main";
 // import UseState from './components/UseStete'
@@ -8,6 +8,9 @@ import ReducerExercise from "./components/reducerExercise/ReducerExercise";
 // import LifeCycle from "./components/LifeCycle";
 // import Users from "./components/Users";
 // import AddHome from "./components/AddYourTutorials/AddHome";
+// import ReducerExercise from "./components/reducerExercise/ReducerExercise";
+import NormalTodo from "./components/reducerExercise/todo-reducer/NormalTodo";
+import ReducerTodo from "./components/reducerExercise/todo-reducer/ReducerTodo";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -18,17 +21,18 @@ function App() {
       {/* <UseState /> */}
       {/* <Form/> */}
       {/* <FormObject /> */}
-
       {/* <button className="btn btn-danger" onClick={() => setShow(!show)}>
         {show ? "hide" : "show"}
       </button>
       {show && <LifeCycle />} */}
-
-      {/* <Users /> */}   {/*---> useFetch */}
-
+      {/* <Users /> */} {/*---> useFetch */}
+      
       {/* <AddHome /> */}
 
-      <ReducerExercise/>
+      {/* <ReducerExercise/> */}
+      
+      {/* <NormalTodo /> */}
+      <ReducerTodo/>
     </div>
   );
 }
