@@ -1,4 +1,6 @@
 import { useState } from "react";
+import ReduxInfo from "./components/reduxInfo/ReduxInfo";
+
 
 // import Events from "./components/Events";
 // import Main from "./components/Main";
@@ -9,8 +11,8 @@ import { useState } from "react";
 // import Users from "./components/Users";
 // import AddHome from "./components/AddYourTutorials/AddHome";
 // import ReducerExercise from "./components/reducerExercise/ReducerExercise";
-import NormalTodo from "./components/reducerExercise/todo-reducer/NormalTodo";
-import ReducerTodo from "./components/reducerExercise/todo-reducer/ReducerTodo";
+// import NormalTodo from "./components/reducerExercise/todo-reducer/NormalTodo";
+// import ReducerTodo from "./components/reducerExercise/todo-reducer/ReducerTodo";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -32,7 +34,9 @@ function App() {
       {/* <ReducerExercise/> */}
       
       {/* <NormalTodo /> */}
-      <ReducerTodo/>
+      {/* <ReducerTodo/> */}
+
+      <ReduxInfo/>
     </div>
   );
 }
