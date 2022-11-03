@@ -1,17 +1,15 @@
-import React from "react";
 import ReduxCounter from "./ReduxCounter";
 import ReduxTodoApp from "./ReduxTodoApp";
-import { createStore } from "redux";
 import { Provider } from "react-redux";
-import { reducer } from "../../redux";
+import { myGetStore } from "../../redux";
 
 const ReduxInfo = () => {
-    const store = createStore(reducer)
+  const store = myGetStore();
   return (
     <div>
       <Provider store={store}>
         <ReduxCounter />
-      {/* <ReduxTodoApp/> */}
+        <ReduxTodoApp />
       </Provider>
     </div>
   );

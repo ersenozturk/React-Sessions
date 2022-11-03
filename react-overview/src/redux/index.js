@@ -1,25 +1,13 @@
-import { DOWN, RESET, UP } from "./types/counterTypes";
+import { createStore, combineReducers } from "redux";
+import { counterReducer } from "./reducer/counterReducer";
+import { todoReducer } from "./reducer/todoReducer";
 
-const initialState = {
-    counter:0,
-}
+const myRootReducer = combineReducers({
+  myCounterKey: counterReducer,
+  myTodoKey: todoReducer,
+});
 
-export const reducer = (state = initialState,action) =>{
-    switch (action.type) {
-        case UP:
-            return{
-                counter : state.counter + 1
-            };
-        case DOWN:
-            return{
-                counter: state.counter -1
-            };
-        case RESET:
-            return{
-                counter: 0
-            };
-        default:
-            return state;
-    }
-}
-
+export const myGetStore = () => {
+  const store = createStore(myRootReducer);
+  return store;
+};

@@ -5,12 +5,11 @@ import {
   resetFunc,
   upFunc,
 } from "../../redux/actions/counterActions";
-import { DOWN, RESET, UP } from "../../redux/types/counterTypes";
 
 const ReduxCounter = () => {
   const dispatch = useDispatch();
   const counter = useSelector((state) => {
-    return state.counter;
+    return state.myCounterKey.counter;
   });
   return (
     <div className="d-flex flex-column gap-3 justify-content-center align-items-center h-100 bg-info">
